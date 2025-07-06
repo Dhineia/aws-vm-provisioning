@@ -23,8 +23,7 @@ This guide documents the process of deploying a static Netflix Clone website on 
 ## Step-by-Step Deployment Instructions
 
 ## 1. Connect to EC2 via SSH
-
-```bash
+Bash
 - ssh -i aws-login.pem ubuntu@<EC2_PUBLIC_IP>
 - chmod 400 aws-login.pem
 - scp -i aws-login.pem -r "Netflix Clone" ubuntu@<EC2_PUBLIC_IP>:/tmp/
