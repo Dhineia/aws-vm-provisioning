@@ -1,21 +1,31 @@
-# Netflix Clone Static Site Deployment
+# Infrastructure Deployment: Static Netflix Clone on AWS EC2 via Terraform
 
-This guide documents the process of deploying a static Netflix Clone website on an Ubuntu EC2 instance using Nginx. The setup was managed using manual provisioning and basic Linux administration commands.
+This project demonstrates how to provision cloud infrastructure using Terraform to host a static Netflix Clone website on an AWS EC2 instance running Ubuntu and Nginx.
 
 ## Tools Used
 
-- **AWS EC2 (Ubuntu)** — Cloud instance hosting the static website
-- **Nginx** — Lightweight web server used to serve the static files
-- **SSH (Secure Shell)** — For remote access to the EC2 instance
-- **SCP (Secure Copy)** — To upload local project files to the remote server
-- **Ubuntu CLI** — To install packages, move files, and configure services
-- **Web Browser** — To verify site accessibility
-- **AWS Console** — To inspect networking, IP address, and security group settings
+- **Terraform** — Infrastructure as Code (IaC) tool to automate AWS resource provisioning
+- **AWS EC2 (Ubuntu)** — Virtual machine used to host the website
+- **AWS VPC, Subnet, Route Table, and Internet Gateway** — Networking components to ensure public accessibility
+- **Security Groups** — Used to control access to ports for SSH (22) and HTTP (80)
+- **Nginx** — Web server installed on EC2 to serve the static files
+- **SCP / SSH** — Tools to securely connect to and transfer files to the EC2 instance
 
-- `index.html`: Main HTML file loaded by Nginx
-- `style.css`: Styling sheet referenced by the HTML
-- `images/`: Asset folder containing site visuals
-  
+## Project Workflow
+
+### 1. Infrastructure Provisioning (Terraform)
+
+- A custom VPC is created to isolate resources
+- A public subnet is defined with automatic public IP mapping
+- An internet gateway is attached for outbound internet access
+- A route table is created and linked to the subnet
+- A security group is configured to allow SSH access from a specific IP and HTTP from all sources
+- An EC2 instance is provisioned using an Ubuntu AMI and linked to the public subnet and security group
+
+### 2. Instance Access and Setup
+
+Once Terraform returns the EC2 public IP:
+ 
 ---
 ## Step-by-Step Deployment Instructions
 
