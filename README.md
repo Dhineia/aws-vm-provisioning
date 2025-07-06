@@ -58,3 +58,4 @@ Although not included in this guide, Terraform was used to automate parts of the
 - provider.tf: Specifies the AWS provider configuration, including access credentials and region settings
 
 ![Output](https://github.com/user-attachments/assets/3bcc5f1a-1bd2-4da5-bdee-54fdaf86a242)
+![image](https://github.com/user-attachments/assets/4d474e65-b3e2-41f1-84a1-a07abd7ce1d7)
