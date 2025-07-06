@@ -1,0 +1,6 @@
+aws_region        = "us-east-1"
+availability_zone = "us-east-1a"
+ami_id            = "ami-020cba7c55df1f615"
+instance_type     = "t2.micro"
+key_name          = "my-keypair"
+allowed_ip        = "49.144.37.41/32"
